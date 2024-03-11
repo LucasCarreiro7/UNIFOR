@@ -1,0 +1,280 @@
+Representação em pseudocódigo:
+1.	Algoritmo para calcular a média de quatro números inteiros dados.
+ALGORITMO
+DECLARE N1, N2, N3, N4: inteiro
+INÍCIO
+ESCREVA “Digite quatro números inteiros”
+LEIA N1, N2, N3, N4
+M == (N1 + N2 + N3 + N4) / 2
+ESCREVA “A média é igual a:”, M
+FIM_ALGORITMO
+
+
+2.	Algoritmo para ler uma temperatura em Celsius (C) e imprimir o valor equivalente em Fahrenheit (F).
+ALGORITMO
+DECLARE C, F: real
+INÍCIO
+ESCREVA “Digite a temperatura em Celsius”
+LEIA C
+F == (9 / 5) * C + 32
+ESCREVA “A temperatura em Fahrenheit é:”, F
+FIM_ALGORITMO
+
+
+3. Algoritmo para ler uma quantidade de chuva dada em polegadas e imprimir o valor equivalente em milímetros.
+ALGORITMO
+DECLARE in, mm: real
+INÍCIO
+ESCREVA “Digite a quantidade de chuva em polegadas”
+LEIA in
+mm == in / 25,4
+ESCREVA “A quantidade em milímetros é:’’, mm
+FIM_ALGORITMO
+
+
+4. Algoritmo para calcular o custo final de um carro ao consumidor.
+ALGORITMO
+DECLARE custo de fábrica, distribuidor, impostos, custo final: real
+INÍCIO
+ESCREVA “Digite o custo de fábrica”
+LEIA custo de fábrica
+custo final == custo de fábrica + 0,12 * custo de fábrica + 0,45 * custo de fábrica
+ESCREVA “O custo ao consumidor é:”, custo final
+FIM_ALGORITMO
+
+
+5. Algoritmo para calcular o quadrado de um número.
+ALGORITMO
+DECLARE N1, N2: real
+INÍCIO
+ESCREVA “Digite um número”
+LEIA N1
+N2 == N1 * N1
+ESCREVA “O quadrado do número é:”, N2
+FIM_ALGORITMO
+
+
+7. Algoritmo para calcular o salário de um vendedor em um determinado mês.
+ALGORITMO
+DECLARE nome = N carros vendidos = X, valor total das vendas = V, salário = S
+INÍCIO
+ESCREVA “Digite o nome do vendedor, o número de carros vendidos e o valor total das vendas”
+LEIA N, X, V
+S == 500 + 50 * N + 0,05 * X
+ESCREVA “O salário do vendedor é:” S
+FIM_ALGORITMO
+
+
+8. Algoritmo para calcular a média do aluno na disciplina.
+ALGORITMO
+DECLARE NP, NQ, M: real
+DECLARE nome: string
+INÍCIO
+ESCREVA “Digite o nome do aluno, a nota da prova e a nota qualitativa”
+LEIA NP, NQ, nome
+M == (NP * 2 + NQ) / 2
+ESCREVA “A média do aluno”, nome, “é igual a:”, M
+FIM_ALGORITMO
+
+
+9. Algoritmo com dados do usuário.
+ALGORITMO
+DECLARE nome, curso, email: string
+DECLARE idade, matrícula: real
+INÍCIO
+ESCREVA “Informe os seguintes dados: nome, matrícula, curso, idade e e-mail.”
+LEIA nome, matrícula, curso, idade, e-mail
+ESCREVA: “nome:”, nome
+                    “matrícula:”, matrícula
+                    “curso:”, curso
+                    “idade:”, idade
+                    “e-mail:”, e-mail
+FIM_ALGORITMO
+
+
+10. Algoritmo para calcular a área e o perímetro de um círculo
+ALGORITMO
+DECLARE R, A: real
+INÍCIO
+ESCREVA “Digite o raio do círculo”
+LEIA R
+A == Ⲡ * R ** 2
+P == 2 * Ⲡ * R
+ESCREVA “Área =’’, A, “e Perímetro =”, P
+FIM_ALGORITMO
+
+
+11. Algoritmo para realizar determinadas operações de potenciação e radiciação.
+ALGORITMO
+DECLARE N, N^2, N^3, √N, 3√N: real e positivo
+INÍCIO
+ESCREVA “Digite o número”
+LEIA N
+N^2 == N * N
+N^3 == N * N * N
+√N == √N
+3√N == 3√N
+ESCREVA “O quadrado do número é:”, N^2
+                  “O cubo do número é:”, N^3
+                  “A raiz quadrada do número é:”, √N
+                  “A raiz cúbica do número é:’’, 3√N
+FIM_ALGORITMO
+
+
+12. Algoritmo para ler três números inteiros e os mostrar em ordem crescente.
+ALGORITMO
+DECLARE N1, N2, N3: inteiro
+INÍCIO
+ESCREVA “Digite três números inteiros”
+LEIA N1, N2, N3
+SE N1 < N2 < N3
+	ESCREVA N1, “<”, N2, “<”, N3
+SE N1 < N3 < N2
+	ESCREVA N1, “<”, N3, “<”, N2
+SE N2 < N1 < N3
+	ESCREVA N2, “<”, N1, “<”, N3
+SE N2 < N3 < N1
+	ESCREVA N2, “<”, N3, “<”, N1
+SE N3 < N1 < N2
+	ESCREVA N3, “<”, N1, “<”, N2
+SE N3 < N2 < N1
+	ESCREVA N3, “<”, N2, “<”, N1
+FIM_ALGORITMO
+
+
+13. Algoritmo para classificar a categoria de um nadador.
+ALGORITMO
+DECLARE I: inteiro
+INÍCIO
+ESCREVA “Digite a idade do nadador”
+LEIA I
+SE I >= 5 E <= 7
+	ESCREVA “O nadador está na categoria infantil A”
+SE I >= 8 E <= 10
+	ESCREVA “O nadador está na categoria infantil B”
+SE I >= 11 E <= 13
+	ESCREVA “O nadador está na categoria juvenil A”
+SE I >= 14 E <= 17
+	ESCREVA “O nadador está na categoria juvenil B”
+SE I >= 18
+	ESCREVA “O nadador está na categoria adulto”
+FIM_ALGORITMO
+
+
+14. Algoritmo para retornar o menor de três números inteiros.
+ALGORITMO
+DECLARE N1, N2, N3: inteiro
+INÍCIO
+ESCREVA “Digite três números inteiros”
+LEIA N1, N2, N3
+SE N1 < N2 E N3
+	ESCREVA “O menor número é:”, N1
+SE N2 < N1 E N3
+	ESCREVA “O menor número é:”, N2
+SE N3 < N1 E N2
+	ESCREVA “O menor número é:”, N3
+FIM_ALGORITMO
+
+
+15. Algoritmo para converter um peso expresso em libras para quilogramas.
+ALGORITMO
+DECLARE lb, kg: real e positivo
+INÍCIO
+ESCREVA “Digite um peso em libras”
+LEIA lb
+kg == lb * 2,2
+ESCREVA “O peso em quilogramas é:”, kg
+FIM_ALGORITMO
+
+
+16. Algoritmo para mostrar o status de um aluno a partir de uma média.
+ALGORITMO 
+DECLARE M: real e positivo
+INÍCIO
+ESCREVA “Digite a sua média na disciplina”
+LEIA M
+SE M >= 6
+	ESCREVA “Aprovado”
+SE M < 3
+	ESCREVA “Reprovado por média”
+SENÃO
+	ESCREVA “Prova final”
+FIM_ALGORITMO
+
+
+17. Algoritmo para calcular um salário líquido baseado no imposto de renda.
+ALGORITMO
+DECLARE S, S1, S2, S3, S4: real e positivo
+INÍCIO
+ESCREVA “Digite o seu salário”
+LEIA S
+SE S < 1499,16
+	ESCREVA “O salário líquido é:’’, S
+SE S >= 1499,16 E < 2246,76
+	S1 == S * 0,925
+	ESCREVA “O salário líquido é:’’, S1
+SE S >= 2246,76 E < 2995,71
+	S2 == S * 0,85
+	ESCREVA “O salário líquido é:’’, S2
+SE S >= 2995,71 E < 3743,20
+	S3 == S * 0,775
+	ESCREVA “O salário líquido é:’’, S3
+SE >= 3743,20
+	S4 == S * 0,75
+	ESCREVA “O salário líquido é:’’, S4
+FIM_ALGORITMO
+
+
+18. Algoritmo para converter o critério de avaliação das escolas brasileiras para o critério de avaliação das escolas americanas.
+ALGORITMO
+DECLARE N: real e positivo
+INÍCIO
+ESCREVA “Digite sua nota baseada no critério de avaliação brasileiro”
+LEIA N
+SE N >= 9 E <=10
+	ESCREVA “A nota é: A”
+SE N >= 8 E <= 8,9
+	ESCREVA “A nota é: B”
+SE N >= 7 E <= 7,9
+	ESCREVA “A nota é: C”
+SE N >=5 E <= 6,9
+	ESCREVA “A nota é: D”
+SE N < 5
+	ESCREVA “A nota é: F”
+
+
+19. Algoritmo para determinar o sinal de um número
+ALGORITMO 
+DECLARE N: real
+INÍCIO
+ESCREVA “Digite um número”
+LEIA N
+SE N = 0
+	ESCREVA “O número é nulo”
+SE N > 0
+	ESCREVA “O número é positivo”
+SE < 0
+	ESCREVA “O número é negativo”
+FIM_ALGORITMO
+
+
+20. Algoritmo que realiza as principais operações matemáticas.
+ALGORITMO
+DECLARE N1, N2, S, SUB, M, D: real
+DECLARE operador: string
+INÍCIO
+ESCREVA “Digite dois números e um operador matemático”
+LEIA N1, N2, operador
+SE operador = ‘‘+’’
+	S = N1 + N2
+	ESCREVA “Resultado =:’’, S
+SE operador = “-’’
+	SUB = N1 – N2
+	ESCREVA “Resultado =:’’, SUB
+SE operador = “*”
+	M = N1 * N2
+	ESCREVA “Resultado =:’’, M
+SE operador = “/”
+	D = N1 / N2
+	ESCREVA “Resultado =:’’, D
+FIM_ALGORITMO
