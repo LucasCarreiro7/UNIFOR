@@ -3,4 +3,7 @@
 
 **Disciplina:** Raciocínio Lógico Algorítmico
 
-## Lista 01
+## Lista de exercícios 01
+
+### Exercício 01
+
