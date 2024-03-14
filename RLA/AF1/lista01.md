@@ -51,3 +51,17 @@ I --> Z([FIM])
 ```
 
 ### Exercício 02
+
+#### Pseudocódigo
+ALGORITMO
+DECLARE S, NS NUMÉRICO
+INÍCIO
+ESCREVA “Digite o salário atual”
+LEIA S
+SE S ≤ 500
+      NS ← S + 0.2 * S
+      ESCREVA “Novo salário =”, NS
+SENÃO
+      NS ← S + 0.1 * S
+      ESCREVA “Novo salário =”, NS
+FIM_ALGORITMO
