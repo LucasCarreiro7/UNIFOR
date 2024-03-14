@@ -1,5 +1,5 @@
 Representação em pseudocódigo:
-1.	Algoritmo para calcular a média de quatro números inteiros dados.
+1. Algoritmo para calcular a média de quatro números inteiros dados.
 ALGORITMO
 DECLARE N1, N2, N3, N4: inteiro
 INÍCIO
@@ -10,7 +10,7 @@ ESCREVA “A média é igual a:”, M
 FIM_ALGORITMO
 
 
-2.	Algoritmo para ler uma temperatura em Celsius (C) e imprimir o valor equivalente em Fahrenheit (F).
+2. Algoritmo para ler uma temperatura em Celsius (C) e imprimir o valor equivalente em Fahrenheit (F).
 ALGORITMO
 DECLARE C, F: real
 INÍCIO
