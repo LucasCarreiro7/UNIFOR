@@ -1,5 +1,5 @@
 # UNIFOR
-**Nome:** Lucas Carreiro
+**Nome:** Lucas Carreiro Gomes
 
 **Disciplina:** Raciocínio Lógico Algorítmico
 
@@ -42,14 +42,13 @@ H --> Z([FIM])
 I --> Z([FIM])
 ```
 #### Teste de mesa
-```
 | numero | numero >= 0 | resto | resto == 0 | Saída |
 | -- | -- | -- | -- | -- |
 | 7 | V | 1 | F | O número é ímpar |
 | 18 | V | 0 | V | O número é par |
 | -2 | F |  |  | O número não é positivo |
 | 0 | V | 0 | V |O número é par |
-```
+
 
 ### Exercício 02
 
@@ -73,7 +72,7 @@ FIM_ALGORITMO
 flowchart TD
 A([INÍCIO]) --> B{{Digite o salário atual}}
 B --> C[\numero\]
-C --> D{S =< 500}
+C --> D{S <= 500}
 D --FALSE--> E[NS == S + 0.1 * S]
 D --TRUE--> F[NS == S + 0.2 * S]
 E --> G{{Novo salário =, NS}}
@@ -82,12 +81,47 @@ F --> H{{Novo salário =, NS}}
 H --> Z
 ```
 #### Teste de mesa
-```
-| salário | S =< 500 | NS | Saída |
+| salário | S <= 500 | NS | Saída |
+| -- | -- | -- | -- |
 | 700 | F | 770 | Novo salário = 770 |
 | 400 | V | 480 | Novo salário = 480 |
 
 ### Exercício 03
+
+#### Pseudocódigo
+```
+ALGORITMO
+DECLARE N1, N2, média: real e positivo
+INÍCIO
+ESCREVA "Digite suas duas notas"
+LEIA N1, N2
+M == (N1 + N2) / 2
+SE M >= 6
+   ESCREVA "Aluno aprovado"
+SENAO
+   ESCREVA "Aluno reprovado"
+FIM_ALGORITMO
+```
+#### Fluxograma
+```mermaid
+flowchart TD
+A([INÍCIO]) --> B{{Digite suas duas notas}}
+B --> C[\numero positivo\]
+C --> D["M == (N1 + N2) / 2"]
+D --> E{M >= 6}
+E --FALSE--> F{{Aluno reprovado}}
+E --TRUE--> G{{Aluno aprovado}}
+F --> Z([FIM])
+G --> Z
+```
+#### Teste de mesa
+| N1 | N2 | M | M >= 6 | Saída |
+| -- | -- | -- | -- | -- |
+| 8 | 9 | 8,5 | V | Aluno aprovado |
+| 4 | 5 | 4,6 | F | Aluno reprovado |
+| 8 | 3 | 5,5 | F | Aluno reprovado |
+
+### Exercício 04
 
 #### Pseudocódigo
 ```
