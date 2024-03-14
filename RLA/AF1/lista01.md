@@ -37,7 +37,17 @@ D --TRUE--> F[resto = número % 2]
 E --> B
 F --> G{resto == 0}
 G --FALSE--> H{{O número é ímpar}}
-G --TRUE--> I{{0 número é ímpar}}
+G --TRUE--> I{{O número é par }}
 H --> Z([FIM])
 I --> Z([FIM])
 ```
+#### Teste de mesa
+```
+| numero | numero >= 0 | resto | resto == 0 | Saída |
+| -- | -- | -- | -- | -- |
+| 7 | V | 1 | F | O número é ímpar |
+| 18 | V | 0 | V | O número é par |
+| -2 | F |  |  | O número não é positivo |
+```
+
+### Exercício 02
