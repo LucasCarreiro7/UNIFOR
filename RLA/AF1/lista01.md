@@ -7,3 +7,5 @@
 
 ### Exercício 01
 
+#### Pseudocódigo
+
