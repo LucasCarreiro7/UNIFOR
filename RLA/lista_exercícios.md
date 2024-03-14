@@ -22,8 +22,9 @@ I --> Z
 ### Pseudocódigo
 ```
 1 ALGORITMO verifica_par_ímpar
-2 DECLARE número, resto NUMÉRICO
-3 ESCREVA "Digite um número"
+2 DECLARE número, resto: INTEIRO
+3 ESCREVA "Digite um número:"
+INÍCIO
 4 LEIA número
 5 SE número > 0 ENTÃO
 6		resto = número % 2
