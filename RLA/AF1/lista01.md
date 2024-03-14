@@ -125,4 +125,14 @@ G --> Z
 
 #### Pseudocódigo
 ```
-
+ALGORITMO
+DECLARE I, X: INTEIRO E POSITIVO
+ESCREVA “Digite sua idade”
+LEIA I
+SE N ≥ 18
+   ENTÃO ESCREVA “Candidato pode tirar a CNH”
+SENÃO
+        18 – I = X
+   ESCREVA “Candidato não pode tirar a CNH, tempo restante em anos:”, X
+FIM_ALGORITMO
+```
