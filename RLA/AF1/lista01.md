@@ -47,7 +47,7 @@ I --> Z([FIM])
 | 7 | V | 1 | F | O número é ímpar |
 | 18 | V | 0 | V | O número é par |
 | -2 | F |  |  | O número não é positivo |
-| 0 | V | 0 | V |O número é par |
+| 0 | V | 0 | V | O número é par |
 
 
 ### Exercício 02
@@ -75,9 +75,9 @@ B --> C[\numero positivo\]
 C --> D{S <= 500}
 D --FALSE--> E[NS == S + 0.1 * S]
 D --TRUE--> F[NS == S + 0.2 * S]
-E --> G{{Novo salário = NS}}
+E --> G{{Novo salário =, NS}}
 G --> Z([FIM])
-F --> H{{Novo salário = NS}}
+F --> H{{Novo salário =, NS}}
 H --> Z
 ```
 #### Teste de mesa
@@ -143,7 +143,7 @@ A([INÍCIO]) --> B{{Digite sua idade}}
 B --> C[\numero inteiro e positivo\]
 C --> D[I >= 18]
 D --FALSE--> E[X == 18 - I]
-E --> F{{Candidato não pode tirar a CNH. Tempo restante em anos: X}}
+E --> F{{Candidato não pode tirar a CNH. Tempo restante em anos:, X}}
 D --TRUE-->G{{Candidato pode tirar a CNH}}
 F --> Z([FIM])
 G --> Z
