@@ -67,3 +67,65 @@ E --> Z([FIM])
 
 #### Pseudocódigo
 ```
+ALGORITMO
+DECLARE N1,N2: REAL, operador: CARACTERE
+INÍCIO
+ESCREVA "Digite dois números e um operador"
+ESCOLHA
+   CASO operador == 'soma'
+     S = N1 + N2
+     ESCREVA "O resultado é:", S
+   CASO operador == 'subtração'
+     SUB = N1 - N2
+     ESCREVA "O resultado é:", SUB
+   CASO operador == 'multiplicação
+     M = N1 * N2
+     ESCREVA "O resultado é:", M
+   CASO operador == "divisão"
+     D = N1 / N2
+       SE N2 = 0
+         ESCREVA "É impossível dividir por 0"
+       SENAO
+         ESCREVA "O resultado é:", D
+FIM_ESCOLHA
+FIM_ALGORITMO
+```
+#### Fluxograma
+```mermaid
+flowchart TD
+A([INÍCIO]) --> B{{Digite dois números e um operador}}
+B --> C[\numero, operador\]
+C --> D{operador == 'soma'}
+D --> E[S == N1 + N2]
+E --> F{{'O resultado é:', S}}
+F --> Z([FIM])
+C --> G{operador == 'subtração'}
+G --> H[SUB == N1 - N2]
+H --> I{{'O resultado é:' SUB}}
+I --> Z
+C --> J{operador == 'multiplicação'}
+J --> K[M == N1 * N2]
+K --> L{{'O resultado é:', M}}
+L --> Z
+C --> M{operador == 'divisão'}
+M --> N[D == N1 / N2]
+N --> O{N2 = 0}
+O --FALSE--> P{{'O resultado é:', D}}
+O --TRUE--> R{{É impossível dividir por 0}}
+P --> Z
+R --> Z
+```
+#### Teste de mesa
+| N1 | N2 | Operador | Resultado | Saída |
+| -- | -- | -- | -- | -- |
+| 14 | 7 | soma | 21 | O resultado é: 21 |
+| 8 | 5 | subtração | 3 | O resultado é: 3 |
+| 20 | 4 | multiplicação | 80 | O resultado é: 80 |
+| 16 | 0 | divisão |  | É impossível dividir por 0 |
+| 30 | 3 | divisão | 10 | O resultado é: 10 |
+
+### Exercício 04
+
+#### Pseudocódigo
+```
+
