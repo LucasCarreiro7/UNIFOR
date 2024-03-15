@@ -38,3 +38,32 @@ E --> Z([FIM])
 
 #### Pseudocódigo
 ```
+ALGORITMO
+DECLARE C, F: real
+INÍCIO
+ESCREVA “Digite a temperatura em Celsius”
+LEIA C
+F == (9 / 5) * C + 32
+ESCREVA “A temperatura em Fahrenheit é:”, F
+FIM_ALGORITMO
+```
+#### Fluxograma
+```mermaid
+flowchart TD
+A([INÍCIO]) --> B{{Digite a temperatura em Celsius}}
+B --> C[\numero\]
+C --> D["F == (9 / 5) * C + 32"]
+D --> E{{A temperatura em Fahrenheit é:, F}}
+E --> Z([FIM])
+```
+#### Teste de mesa
+| C | F | Saída |
+| -- | -- | -- |
+| 25 | 77 | A temperatura em Fahrenheit é: 77 |
+| 0 | 32 | A temperatura em Fahrenheit é: 32 |
+| -10 | 14 | A temperatura em Fahrenheit é: 14 |
+
+### Exercício 03
+
+#### Pseudocódigo
+```
