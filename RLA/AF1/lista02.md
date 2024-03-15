@@ -71,6 +71,7 @@ ALGORITMO
 DECLARE N1,N2: REAL, operador: CARACTERE
 INÍCIO
 ESCREVA "Digite dois números e um operador"
+LEIA N1, N2, operador
 ESCOLHA
    CASO operador == 'soma'
      S = N1 + N2
@@ -128,4 +129,51 @@ R --> Z
 
 #### Pseudocódigo
 ```
+ALGORITMO
+DECLARE I: inteiro
+INÍCIO
+ESCREVA “Digite a idade”
+LEIA I
+ESCOLHA
+   CASO I < 5
+      ESCREVA "Idade mínima ainda não atingida"
+   CASO I >= 5 E <= 7
+      ESCREVA "Categoria infantil A"
+   CASO I >= 8 E <= 10
+      ESCREVA "Categoria infantil B"
+   CASO I >= 11 E <= 13
+      ESCREVA "Categoria juvenil A"
+   CASO I >= 14 E <= 17
+      ESCREVA "Categoria juvenil B"
+   CASO I >= 18
+      ESCREVA "Categoria adulto"
+FIM_ESCOLHA
+FIM_ALGORITMO
+```
+#### Fluxograma
+```mermaid
+flowchart TD
+A([INÍCIO]) --> B{{Digite a idade}}
+B --> C[\numero inteiro\]
+C --> D{I < 5}
+C --> D2{I >= 5 E <= 7}
+D --> E{{Idade mínima ainda não atingida}}
+E --> Z([FIM])
+D2 --> F{{Categoria infantil A}}
+F --> Z
+C --> D3{I >= 8 E <= 10}
+D3 --> G{{Categoria infantil B}}
+G --> Z
+C --> D4{I >= 11 E <= 13}
+D4 --> H{{Categoria juvenil A}}
+H --> Z
+C --> D5{I >= 14 E <= 17}
+D5 --> I{{Categoria juvenil B}}
+I --> Z
+C --> D6{I >= 18}
+D6 --> J{{Categoria adulto}}
+J --> Z
+```
+#### Teste de mesa
+|
 
