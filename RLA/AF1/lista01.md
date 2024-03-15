@@ -71,13 +71,13 @@ FIM_ALGORITMO
 ```mermaid
 flowchart TD
 A([INÍCIO]) --> B{{Digite o salário atual}}
-B --> C[\numero\]
+B --> C[\numero positivo\]
 C --> D{S <= 500}
 D --FALSE--> E[NS == S + 0.1 * S]
 D --TRUE--> F[NS == S + 0.2 * S]
-E --> G{{Novo salário =, NS}}
+E --> G{{Novo salário = NS}}
 G --> Z([FIM])
-F --> H{{Novo salário =, NS}}
+F --> H{{Novo salário = NS}}
 H --> Z
 ```
 #### Teste de mesa
@@ -129,10 +129,28 @@ ALGORITMO
 DECLARE I, X: INTEIRO E POSITIVO
 ESCREVA “Digite sua idade”
 LEIA I
-SE N ≥ 18
+SE I ≥ 18
    ENTÃO ESCREVA “Candidato pode tirar a CNH”
 SENÃO
-        18 – I = X
-   ESCREVA “Candidato não pode tirar a CNH, tempo restante em anos:”, X
+   18 – I = X
+   ESCREVA “Candidato não pode tirar a CNH. Tempo restante em anos:”, X
 FIM_ALGORITMO
 ```
+#### Fluxograma
+```mermaid
+flowchart TD
+A([INÍCIO]) --> B{{Digite sua idade}}
+B --> C[\numero inteiro e positivo\]
+C --> D[I >= 18]
+D --FALSE--> E[X == 18 - I]
+E --> F{{Candidato não pode tirar a CNH. Tempo restante em anos: X}}
+D --TRUE-->G{{Candidato pode tirar a CNH}}
+F --> Z([FIM])
+G --> Z
+```
+#### Teste de mesa
+| I | I >= 18 | X | Saída |
+| -- | -- | -- | -- |
+| 18 | V |  | Candidato pode tirar a CNH |
+| 20 | V |  | Candidato pode tirar a CNH |
+| 16 | F | 2 | Candidato não pode tirar a CNH. Tempo restante em anos: 2 |
