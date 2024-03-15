@@ -5,3 +5,7 @@
 
 ## Lista de exercícios 02
 
+### Exercício 01
+
+#### Pseudocódigo
+```
