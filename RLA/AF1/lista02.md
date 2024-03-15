@@ -175,5 +175,11 @@ D6 --> J{{Categoria adulto}}
 J --> Z
 ```
 #### Teste de mesa
-|
-
+| I | I < 5 | I >= 5 E <= 7 | I >= 8 E <= 10 | I >= 11 E <= 13 | I >= 14 E <= 17 | I >= 18 | Saída |
+| -- | -- | -- | -- | -- | -- | -- | -- |
+| 4 | V | F | F | F | F | F | Idade mínima ainda não atingida |
+| 7 | F | V | F | F | F | F | Categoria infantil A |
+| 8 | F | F | V | F | F | F | Categoria infantil B |
+| 12 | F | F | F | V | F | F | Categoria juvenil A |
+| 15 | F | F | F | F | V | F | Categoria juvenil B |
+| 19 | F | F | F | F | F | V | Categoria adulto |
