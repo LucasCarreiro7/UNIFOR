@@ -22,7 +22,7 @@ FIM_ALGORITMO
 ```mermaid
 flowchart TD
 A([INÍCIO]) --> B{{Digite quatro números inteiros}}
-B --> C[\numero inteiro\]
+B --> C[\numero\]
 C --> D["M == (N1 + N2 + N3 + N4) / 4"]
 D --> E{{A média é igual a:, M}}
 E --> Z([FIM])
@@ -134,6 +134,10 @@ DECLARE I: inteiro
 INÍCIO
 ESCREVA “Digite a idade”
 LEIA I
+ENQUANTO
+   I < 0
+   ESCREVA "Digite um número positivo"
+FIM_ENQUANTO
 ESCOLHA
    CASO I < 5
       ESCREVA "Idade mínima ainda não atingida"
@@ -154,32 +158,37 @@ FIM_ALGORITMO
 ```mermaid
 flowchart TD
 A([INÍCIO]) --> B{{Digite a idade}}
-B --> C[\numero inteiro\]
-C --> D{I < 5}
-C --> D2{I >= 5 E <= 7}
+B --> C[\numero\]
+C --> C2{I < 0}
+C2 --FALSE--> D{I < 5}
+C2 --TRUE--> C3{{Digite um número positivo}}
+C3 --> C4[\numero\]
+C4 --> B
+C2 --> D2{I >= 5 E <= 7}
 D --> E{{Idade mínima ainda não atingida}}
 E --> Z([FIM])
 D2 --> F{{Categoria infantil A}}
 F --> Z
-C --> D3{I >= 8 E <= 10}
+C2 --> D3{I >= 8 E <= 10}
 D3 --> G{{Categoria infantil B}}
 G --> Z
-C --> D4{I >= 11 E <= 13}
+C2 --> D4{I >= 11 E <= 13}
 D4 --> H{{Categoria juvenil A}}
 H --> Z
-C --> D5{I >= 14 E <= 17}
+C2 --> D5{I >= 14 E <= 17}
 D5 --> I{{Categoria juvenil B}}
 I --> Z
-C --> D6{I >= 18}
+C2 --> D6{I >= 18}
 D6 --> J{{Categoria adulto}}
 J --> Z
 ```
 #### Teste de mesa
-| I | I < 5 | I >= 5 E <= 7 | I >= 8 E <= 10 | I >= 11 E <= 13 | I >= 14 E <= 17 | I >= 18 | Saída |
-| -- | -- | -- | -- | -- | -- | -- | -- |
-| 4 | V | F | F | F | F | F | Idade mínima ainda não atingida |
-| 7 | F | V | F | F | F | F | Categoria infantil A |
-| 8 | F | F | V | F | F | F | Categoria infantil B |
-| 12 | F | F | F | V | F | F | Categoria juvenil A |
-| 15 | F | F | F | F | V | F | Categoria juvenil B |
-| 19 | F | F | F | F | F | V | Categoria adulto |
+| I | I < 0 | I < 5 | I >= 5 E <= 7 | I >= 8 E <= 10 | I >= 11 E <= 13 | I >= 14 E <= 17 | I >= 18 | Saída |
+| -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 4 | F | V | F | F | F | F | F | Idade mínima ainda não atingida |
+| 7 | F | F | V | F | F | F | F | Categoria infantil A |
+| 8 | F | F | F | V | F | F | F | Categoria infantil B |
+| 12 | F | F | F | F | V | F | F | Categoria juvenil A |
+| 15 | F | F | F | F | F | V | F | Categoria juvenil B |
+| 19 | F | F | F | F | F | F | V | Categoria adulto |
+| -7 | V |  |  |  |  |  |  | Digite um número positivo |
