@@ -59,7 +59,9 @@ cont == 0
 ESCREVA "Digite um conjunto de notas"
 LEIA n
 SE nota > 100 ou nota < 0
+  REPITA
   ESCREVA "Apenas notas entre 0 e 100 são válidas"
+  ATE_QUE n <= 100 e n >= 0
 SENÃO
   PARA i de 1 ATÉ n FAÇA
     SE nota >= 50
@@ -113,7 +115,9 @@ ESCREVA "Digite um número positivo"
 LEIA n
 soma == 0
 SE n < 0
+  REPITA
   ESCREVA "O número deve ser positivo"
+  ATE_QUE n >= 0
 SENÃO
   PARA i de 1 ATÉ n PASSO 1 FAÇA
     soma == soma + i
@@ -146,3 +150,18 @@ J --> Z([FIM])
 | 3 | 5 | 3 | 3 | 6 |
 | 4 | 5 | 6 | 4 | 10 |
 | 5 | 5 | 10 | 5 | 15 |
+
+### Questão 04 - Cálculo fatorial
+
+#### Pseudocódigo
+```
+ALGORITMO
+DECLARE n, fatorial: inteiro
+INÍCIO
+ESCREVA "Digite um número positivo"
+LEIA n
+SE n < 0
+  REPITA
+  ESCREVA "O número deve ser positivo"
+  ATE_QUE n >= 0
+SENAO
