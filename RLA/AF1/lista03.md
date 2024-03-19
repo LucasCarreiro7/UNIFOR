@@ -137,10 +137,9 @@ ENQUANTO
     media == soma_notas / quantidade_notas
     ESCREVA "Digite uma nota"
 FIM_ENQUANTO
-SE
-  nota < 0
-    media == soma_notas / quantidade_notas
-    ESCREVA "foram lidas", quantidade_notas, "notas. A média das notas é":, media
+SE nota < 0
+  media == soma_notas / quantidade_notas
+  ESCREVA "foram lidas", quantidade_notas, "notas. A média das notas é":, media
 FIM_ALGORITMO
 ```
 #### Fluxograma
