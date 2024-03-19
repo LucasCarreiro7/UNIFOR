@@ -13,7 +13,7 @@
 
 # Avaliação Diagnóstica 1
 
-### Questão 03
+### Questão 03 - Soma de um conjunto de números
 
 #### Pseudocódigo
 ```
