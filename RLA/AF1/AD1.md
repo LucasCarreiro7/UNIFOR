@@ -13,7 +13,12 @@
 
 # Avaliação Diagnóstica 1
 
-### Questão 07
+### Questão 02
 
 #### Pseudocódigo
 ```
+ALGORITMO
+DECLARE n: inteiro, i, soma: real
+INÍCIO
+ESCREVA "Digite um número"
+  SE n
