@@ -18,7 +18,7 @@
 #### Pseudocódigo
 ```
 ALGORITMO
-DECLARE a,b: real
+DECLARE a,b: REAL
 INÍCIO
 a = valor_de_a
 ESCREVA "Digite duas variáveis"
@@ -109,7 +109,7 @@ H --> Z([FIM])
 #### Pseudocódigo
 ```
 ALGORITMO
-DECLARE n, rep: inteiro, i, soma: real
+DECLARE n, rep: INTEIRO, i, soma: REAL
 INÍCIO
 ESCREVA "Digite um número positivo"
 LEIA n
@@ -156,7 +156,7 @@ J --> Z([FIM])
 #### Pseudocódigo
 ```
 ALGORITMO
-DECLARE n, fatorial: inteiro
+DECLARE n, fatorial: INTEIRO
 INÍCIO
 ESCREVA "Digite um número positivo"
 LEIA n
@@ -196,3 +196,48 @@ I --> Z([FIM])
 | 4 | 5 | 4 | 24 |
 | 5 | 5 | 5 | 120 |
 
+### Questão 7 - Inversão dos dígitos de um número inteiro
+
+#### Pseudocódigo
+```
+ALGORITMO
+DECLARE n, num_inv, digito: INTEIRO
+INÍCIO
+ESCREVA "Digite um número positivo"
+LEIA n
+num_inv == 0
+SE n < 0
+  ESCREVA "O número deve ser positivo"
+SENAO
+  ENQUANTO n > 0
+    digito == n % 10
+    num_inv == num_inv * 10 + digito
+    n == n / 10
+  FIM_ENQUANTO
+  ESCREVA "O número invertido é:", num_inv
+FIM_ALGORITMO
+```
+#### Fluxograma
+```mermaid
+flowchart TD
+A([INÍCIO]) --> B{{Digite um número positivo}}
+B --> C[\numero, num_inv, digito\]
+C --> D[\num_inv = 0\]
+D -->E{n < 0}
+E --FALSE--> G{n > 0}
+G --> K{{O número invertido é, num_inv}}
+K --> Z([FIM])
+G --> H[digito = n % 10]
+H --> I[num_inv = num_inv * 10 + digito]
+I --> J[n == n / 10]
+J --LOOP--> G
+E --TRUE--> F{{O número deve ser positivo}}
+F --> B
+```
+#### Teste de mesa
+| it | n | num_inv | digito | num_inv | n |
+| -- | -- | -- | -- | -- | -- |
+| 1 | 1234 | 0 | 4 | 4 | 123 |
+| 2 | 123 | 4 | 3 | 43 | 12 |
+| 3 | 12 | 43 | 2 | 432 | 1 |
+| 4 | 1 | 432 | 1 | 4321 |  |
