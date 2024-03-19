@@ -13,7 +13,7 @@
 
 # Avaliação Diagnóstica 1
 
-### Questão 02
+### Questão 03
 
 #### Pseudocódigo
 ```
@@ -30,8 +30,30 @@ SENÃO
     soma == soma + i
     ESCREVA "A soma atual é:", soma
   FIM_PARA
-  ESCREVA "A soma é:",
+  ESCREVA "A soma final é:",
 FIM_ALGORITMO
 ```
 #### FLUXOGRAMA
-
+```mermaid
+flowchart TD
+A([INÍCIO]) --> B{{Digite um número}}
+B --> C[\numero\]
+C --> D[\soma = 0\]
+D --> E{n < 0}
+E --FALSE--> G[[i=1 ATÉ n PASSO 1]]
+G --> J{{A soma final é:, soma}}
+G --> H[soma = soma + i]
+H --> I{{A soma atual é:, soma}}
+I --LOOP--> G
+E --TRUE--> F{{O número deve ser positivo}}
+F -->B
+J --> Z([FIM])
+```
+#### Teste de mesa
+| it | n | soma | i | soma = soma + i |
+| -- | -- | -- | -- | -- |
+| 1 | 5 | 0 | 1 | 1 |
+| 2 | 5 | 1 | 2 | 3 |
+| 3 | 5 | 3 | 3 | 6 |
+| 4 | 5 | 6 | 4 | 10 |
+| 5 | 5 | 10 | 5 | 15 |
