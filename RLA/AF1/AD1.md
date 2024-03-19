@@ -33,20 +33,17 @@ FIM_ALGORITMO
 ```mermaid
 flowchart TD
 A([INÍCIO]) --> B{{Digite duas variáveis}}
-B --> C[\numero\]
-C --> D[\a = valor_de_a\]
-D --> F{{Valores das variáveis:, a, b}}
-F --> G[\a = b\]
-G --> H[\b = valor_de_a\]
+B --> C[\a, b\]
+C --> D[a = valor_de_a]
+D --> G[a = b]
+G --> H[b = valor_de_a]
 H --> I{{Valores após a troca:, a, b}}
 I --> Z([FIM])
 ```
 #### Teste de mesa
-| a | b | valor_de_a | a | b |
-| -- | -- | -- | -- | -- |
-| 7 | 2 | 7 | 2 | 7 |
-| 8 | 1 | 8 | 1 | 8 |
-| 6 | 4 | 6 | 4 | 6 |
+| a | b | valor_de_a | a | b | Saída |
+| -- | -- | -- | -- | -- | -- |
+| 7 | 2 | 7 | 2 | 7 | 2, 7 |
 
 ### Questão 02 - Contagem
 
@@ -91,18 +88,18 @@ G --LOOP--> E
 H --> Z([FIM])
 ```
 #### Teste de mesa
-| it | n | nota | nota >= 50 | cont |
-| -- | -- | -- | -- | -- |
-| 1 | 10 | 90 | V | 1 |
-| 2 | 10 | 78 | V | 2 |
-| 3 | 10 | 85 | V | 3 |
-| 4 | 10 | 45 | F | 3 |
-| 5 | 10 | 92 | V | 4 |
-| 6 | 10 | 82 | V | 5 |
-| 7 | 10 | 40 | F | 5 |
-| 8 | 10 | 88 | V | 6 |
-| 9 | 10 | 35 | F | 6 |
-| 10 | 10 | 65 | V | 7 |
+| it | n | nota | nota >= 50 | cont | aprovados |
+| -- | -- | -- | -- | -- | -- |
+| 1 | 10 | 90 | V | 1 |  |
+| 2 | 10 | 78 | V | 2 |  |
+| 3 | 10 | 85 | V | 3 |  |
+| 4 | 10 | 45 | F | 3 |  |
+| 5 | 10 | 92 | V | 4 |  |
+| 6 | 10 | 82 | V | 5 |  |
+| 7 | 10 | 40 | F | 5 |  |
+| 8 | 10 | 88 | V | 6 |  |
+| 9 | 10 | 35 | F | 6 |  |
+| 10 | 10 | 65 | V | 7 |  |
 
 ### Questão 03 - Soma de um conjunto de números
 
@@ -111,7 +108,7 @@ H --> Z([FIM])
 ALGORITMO
 DECLARE n, rep: INTEIRO, i, soma: REAL
 INÍCIO
-ESCREVA "Digite um número positivo"
+ESCREVA "Digite um número não-negativo"
 LEIA n
 soma == 0
 SE n < 0
@@ -129,10 +126,11 @@ FIM_ALGORITMO
 #### FLUXOGRAMA
 ```mermaid
 flowchart TD
-A([INÍCIO]) --> B{{Digite um número}}
+A([INÍCIO]) --> B{{Digite a quantidade de números}}
 B --> C[\numero\]
 C --> D[\soma = 0\]
-D --> E{n < 0}
+D --> D2[i=1]
+D2 --> E{n < 0}
 E --FALSE--> G[[i=1 ATÉ n]]
 G --> J{{A soma final é:, soma}}
 G --> H[soma = soma + i]
@@ -158,7 +156,7 @@ J --> Z([FIM])
 ALGORITMO
 DECLARE n, fatorial: INTEIRO
 INÍCIO
-ESCREVA "Digite um número positivo"
+ESCREVA "Digite um número não-negativo"
 LEIA n
 fatorial == 1
 SE n < 0
@@ -175,15 +173,15 @@ FIM_ALGORITMO
 #### Fluxograma
 ```mermaid
 flowchart TD
-A([INÍCIO]) --> B{{Digite um número positivo}}
+A([INÍCIO]) --> B{{Digite um número não-negativo}}
 B --> C[\numero, fatorial\]
 C --> D[\fatorial = 1\]
 D --> E{n < 0}
 E --FALSE--> G[[i=1 ATÉ n]]
-G --> I{{O fatorial de, n, é, fatorial}}
-G --> H[fatorial = fatorial * i]
+G --i>n--> I{{O fatorial de, n, é, fatorial}}
+G --i=1,2...n--> H[fatorial = fatorial * i]
 H --LOOP--> G
-E --TRUE--> F{{O número deve ser positivo}}
+E --TRUE--> F{{O número não pode ser negativo}}
 F --> B
 I --> Z([FIM])
 ```
@@ -195,6 +193,28 @@ I --> Z([FIM])
 | 3 | 5 | 3 | 6 |
 | 4 | 5 | 4 | 24 |
 | 5 | 5 | 5 | 120 |
+
+### Questão 6 - Geração da sequência de Fibonacci
+
+#### Pseudocódigo
+```
+ALGORITMO
+DECLARE a, b, n, next: INTEIRO
+INÍCIO
+ESCREVA "Digite o número de termos da sequência"
+LEIA n
+ESCOLHA
+  CASO n <= 0
+    ESCREVA "O número deve ser positivo"
+  CASO n = 1
+    ESCREVA "0"
+  CASO n = 2
+    ESCREVA "0, 1"
+  CASO n > 2
+    a == 0
+    b == 1
+    PARA i de 3 ATÉ n FAÇA
+      next = 
 
 ### Questão 7 - Inversão dos dígitos de um número inteiro
 
@@ -220,14 +240,14 @@ FIM_ALGORITMO
 #### Fluxograma
 ```mermaid
 flowchart TD
-A([INÍCIO]) --> B{{Digite um número positivo}}
+A([INÍCIO]) --> B{{Digite um número inteiro}}
 B --> C[\numero, num_inv, digito\]
 C --> D[\num_inv = 0\]
 D -->E{n < 0}
 E --FALSE--> G{n > 0}
-G --> K{{O número invertido é, num_inv}}
+G --FALSE--> K{{O número invertido é, num_inv}}
 K --> Z([FIM])
-G --> H[digito = n % 10]
+G --TRUE--> H[digito = n % 10]
 H --> I[num_inv = num_inv * 10 + digito]
 I --> J[n == n / 10]
 J --LOOP--> G
