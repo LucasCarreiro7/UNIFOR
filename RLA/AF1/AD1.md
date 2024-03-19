@@ -18,7 +18,7 @@
 #### Pseudocódigo
 ```
 ALGORITMO
-DECLARE n: inteiro, i, soma: real
+DECLARE n, rep: inteiro, i, soma: real
 INÍCIO
 ESCREVA "Digite um número positivo"
 LEIA n
@@ -29,5 +29,9 @@ SENÃO
   PARA i de 1 ATÉ n PASSO 1 FAÇA
     soma == soma + i
     ESCREVA "A soma atual é:", soma
-
+  FIM_PARA
+  ESCREVA "A soma é:",
+FIM_ALGORITMO
+```
+#### FLUXOGRAMA
 
