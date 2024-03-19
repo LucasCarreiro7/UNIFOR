@@ -49,6 +49,48 @@ I --> Z([FIM])
 | -2 | F |  |  | O número não é positivo |
 | 0 | V | 0 | V | O número é par |
 
+### Exercício 02
+
+#### Pseudocódigo
+```
+ALGORITMO
+DECLARE i, soma: INTEIRO
+INÍCIO
+LEIA i
+multiplo = 0
+PARA i DE 0 ATÉ 30
+  multiplo == i + i
+  SE multiplo % 3 = 0
+    ESCREVA multiplo
+FIM_PARA
+FIM_ALGORITMO
+```
+#### Fluxograma
+```mermaid
+flowchart TD
+A([INÍCIO]) --> B[\numero\]
+B --> C[[i = 0 ATÉ 30 PASSO 1]]
+C --> F{multiplo % 3 = 0}
+F --TRUE--> G{{multiplo}} 
+G --> Z([FIM])
+C --> D[multiplo = i + 3]
+D --LOOP--> C
+```
+#### Teste de mesa
+| it | N | multiplo | multiplo % 3 = 0 | Saída |
+| -- | -- | -- | -- | -- |
+| 0 | 30 | 0 | V | 0 |
+| 1 | 30 | 3 | V | 3 |
+| 2 | 30 | 6 | V | 6 |
+| 3 | 30 | 9 | V | 9 |
+| 4 | 30 | 12 | V | 12 |
+| 5 | 30 | 15 | V | 15 |
+| 6 | 30 | 18 | V | 18 |
+| 7 | 30 | 21 | V | 21 |
+| 8 | 30 | 24 | V | 24 |
+| 9 | 30 | 27 | V | 27 |
+| 10 | 30 | 30 | V | 30 |
+
 ### Exercício 03
 
 #### Pseudocódigo
