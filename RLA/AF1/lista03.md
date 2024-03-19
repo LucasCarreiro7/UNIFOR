@@ -69,7 +69,8 @@ FIM_ALGORITMO
 ```mermaid
 flowchart TD
 A([INÍCIO]) --> B[\numero\]
-B --> C[[i = 0 ATÉ 30 PASSO 1]]
+B --> B2[\multiplo = 0\]
+B2 --> C[[i = 0 ATÉ 30 PASSO 1]]
 C --> F{multiplo % 3 = 0}
 F --TRUE--> G{{multiplo}} 
 G --> Z([FIM])
