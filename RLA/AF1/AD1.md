@@ -133,7 +133,7 @@ A([INÍCIO]) --> B{{Digite um número}}
 B --> C[\numero\]
 C --> D[\soma = 0\]
 D --> E{n < 0}
-E --FALSE--> G[[i=1 ATÉ n PASSO 1]]
+E --FALSE--> G[[i=1 ATÉ n]]
 G --> J{{A soma final é:, soma}}
 G --> H[soma = soma + i]
 H --> I{{A soma atual é:, soma}}
@@ -151,7 +151,7 @@ J --> Z([FIM])
 | 4 | 5 | 6 | 4 | 10 |
 | 5 | 5 | 10 | 5 | 15 |
 
-### Questão 04 - Cálculo fatorial
+### Questão 05 - Cálculo fatorial
 
 #### Pseudocódigo
 ```
@@ -160,8 +160,39 @@ DECLARE n, fatorial: inteiro
 INÍCIO
 ESCREVA "Digite um número positivo"
 LEIA n
+fatorial == 1
 SE n < 0
   REPITA
   ESCREVA "O número deve ser positivo"
   ATE_QUE n >= 0
 SENAO
+  PARA i de 1 ATÉ n FAÇA
+  fatorial = fatorial * i
+  FIM_PARA
+  ESCREVA "O fatorial de", n, "é", fatorial
+FIM_ALGORITMO
+```
+#### Fluxograma
+```mermaid
+flowchart TD
+A([INÍCIO]) --> B{{Digite um número positivo}}
+B --> C[\numero, fatorial\]
+C --> D[\fatorial = 1\]
+D --> E{n < 0}
+E --FALSE--> G[[i=1 ATÉ n]]
+G --> I{{O fatorial de, n, é, fatorial}}
+G --> H[fatorial = fatorial * i]
+H --LOOP--> G
+E --TRUE--> F{{O número deve ser positivo}}
+F --> B
+I --> Z([FIM])
+```
+#### Teste de mesa
+| it | n | i | fatorial |
+| -- | -- | -- | -- |
+| 1 | 5 | 1 | 1 |
+| 2 | 5 | 2 | 2 |
+| 3 | 5 | 3 | 6 |
+| 4 | 5 | 4 | 24 |
+| 5 | 5 | 5 | 120 |
+
