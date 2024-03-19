@@ -23,13 +23,16 @@ INÍCIO
 cont == 0
 ESCREVA "Digite um conjunto de notas"
 LEIA n
-PARA i de 1 ATÉ n FAÇA
-  SE nota >= 50
-    cont == cont + 1
-  SENÃO
-    cont == cont
-FIM_PARA
-ESCREVA "A quantidade de aprovados é:", cont
+SE nota > 100 ou nota < 0
+  ESCREVA "Apenas notas entre 0 e 100 são válidas"
+SENÃO
+  PARA i de 1 ATÉ n FAÇA
+    SE nota >= 50
+      cont == cont + 1
+    SENÃO
+      cont == cont
+  FIM_PARA
+  ESCREVA "A quantidade de aprovados é:", cont
 FIM_ALGORITMO
 ```
 #### Fluxograma
@@ -38,7 +41,10 @@ flowchart TD
 A([INÍCIO]) --> B{{Digite um conjunto de notas}}
 B --> C[\n, notas, cont\]
 C --> D[\cont = 0\]
-D --> E[[i=1 ATÉ n]]
+D --> D2{nota > 100 ou nota < 0}
+D2 --FALSE--> E[[i=1 ATÉ n]]
+D2 --TRUE--> D3{{Apenas notas entre 0 e 100 são válidas}}
+D3 --> B
 E --> H{{A quantidade de aprovados é:, cont}}
 E --> F{nota >= 50}
 F --FALSE--> G2[cont = cont]
