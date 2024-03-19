@@ -149,6 +149,10 @@ J --> Z([FIM])
 | 4 | 5 | 6 | 4 | 10 |
 | 5 | 5 | 10 | 5 | 15 |
 
+### Questão 04 - Cálculo de uma série
+
+#### Pseudocódigo
+
 ### Questão 05 - Cálculo fatorial
 
 #### Pseudocódigo
