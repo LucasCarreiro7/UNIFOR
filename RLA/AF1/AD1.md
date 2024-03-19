@@ -4,7 +4,7 @@
 **Disciplina:** Raciocínio Lógico Algorítmico <br>
 **Código/Turma:** T160-40 <br>
 **Professor:** Ricardo Carubbi <br>
-**Data:** preencha com a data de envio <br>
+**Data:** 20/03/2024 <br>
 **Aluno(a):** Lucas Carreiro Gomes <br>
 **Matrícula:** 2417144 <br>
 
