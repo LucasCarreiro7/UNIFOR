@@ -214,7 +214,48 @@ ESCOLHA
     a == 0
     b == 1
     PARA i de 3 ATÉ n FAÇA
-      next = 
+      ESCREVA "0, 1"
+      next = a + b
+      ESCREVA next
+      a = b
+      b = next
+    FIM_PARA
+FIM_ESCOLHA
+FIM_ALGORITMO
+```
+#### Fluxograma
+```mermaid
+flowchart TD
+A([INÍCIO]) --> B{{Digite o número de termos da sequência}}
+B --> C[\numero\]
+C6 --> C7{{O número deve ser positivo}}
+C7 --> Z
+C --> C2{n = 1}
+C2 --> C3{{0}}
+C --> C4{n = 2}
+C3 --> Z([FIM])
+C4 --> C5{{1}}
+C5 --> Z
+C --> C6{n <=  0}
+C --> C8{n > 2}
+C8 --> D[\a = 0\]
+D --> E[\b = 0\]
+E --> F[[i=1 ATÉ n]]
+F --> G{{0, 1}}
+G --> H[next = a + b]
+H --> I[a = b]
+I --> J[b = next]
+J --LOOP-->F
+F --> Z
+```
+#### Teste de mesa
+| it | n  | a  | b  | i  | saída | next | a = b | b = next |
+| -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 1  | 5  | 0  | 1  | 1  | 0 | 0 + 1 = 1 | 1 | 1 |
+| 2  | 5  | 1  | 1  | 2  | 1 | 1 + 1 = 2 | 1 | 2 |
+| 3  | 5  | 1  | 2  | 3  | 1 | 1 + 2 = 3 | 2 | 3 |
+| 4  | 5  | 2  | 3  | 4  | 2 | 2 + 3 = 5 | 3 | 5 |
+| 4  | 5  | 3  | 5  | 5  | 3 | 3 + 5 = 8 | 5 | 8 |
 
 ### Questão 7 - Inversão dos dígitos de um número inteiro
 
