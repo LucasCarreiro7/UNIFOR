@@ -123,3 +123,45 @@ E --> Z([FIM])
 
 #### Pseudocódigo
 ```
+ALGORITMO
+DECLARE notas, soma_notas, media: real, quantidade_notas: inteiro
+INÍCIO
+soma_notas = 0
+quantidade_notas = 0
+ESCREVA "Digite uma nota"
+ENQUANTO
+  nota >= 0
+    REPITA
+    soma_notas == soma_notas + nota
+    quantidade_notas == quantidade_notas + 1
+    media == soma_notas / quantidade_notas
+    ESCREVA "Digite uma nota"
+FIM_ENQUANTO
+SE
+  nota < 0
+    media == soma_notas / quantidade_notas
+    ESCREVA "foram lidas", quantidade_notas, "notas. A média das notas é":, media
+FIM_ALGORITMO
+```
+#### Fluxograma
+```mermaid
+flowchart TD
+A([INÍCIO]) --> B{{Digite uma nota}}
+B --> C[\numero\]
+C --> D{nota >= 0}
+D --FALSE--> E{media = soma_notas / quantidade_notas}
+E --> F{{foram lidas, quantidade_notas, notas. A média das notas é:, media}}
+D --TRUE--> G[soma_notas = soma_notas + nota]
+D --TRUE--> H[ quantidade_notas = quantidade_notas + 1]
+G --> I[ media = soma_notas / quantidade_notas]
+H --> I
+I --LOOP--> B
+```
+#### Teste de mesa
+| nota | nota >= 0 | soma_notas | quantidade_notas | media | Saída |
+| -- | -- | -- | -- | -- | -- |
+| 8 | V | 8 | 1 | 8 |  |
+| 10 | V | 18 | 2 | 9 |  |
+| 6 | V | 24 | 3 | 8 |  |
+| 9 | V | 33 | 4 | 8,25 |  |
+| -7 | F |  |  |  | Foram lidas 4 notas. A média aritmética é 8,25 |
