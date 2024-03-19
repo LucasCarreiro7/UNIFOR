@@ -20,5 +20,14 @@
 ALGORITMO
 DECLARE n: inteiro, i, soma: real
 INÍCIO
-ESCREVA "Digite um número"
-  SE n
+ESCREVA "Digite um número positivo"
+LEIA n
+soma == 0
+SE n < 0
+  ESCREVA "O número deve ser positivo"
+SENÃO
+  PARA i de 1 ATÉ n PASSO 1 FAÇA
+    soma == soma + i
+    ESCREVA "A soma atual é:", soma
+
+
