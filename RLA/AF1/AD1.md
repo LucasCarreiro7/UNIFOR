@@ -13,6 +13,41 @@
 
 # Avaliação Diagnóstica 1
 
+### Questão 01 - Troca dos valores de duas variáveis
+
+#### Pseudocódigo
+```
+ALGORITMO
+DECLARE a,b: real
+INÍCIO
+a = valor_de_a
+ESCREVA "Digite duas variáveis"
+LEIA a,b
+ESCREVA "Valores das variáveis:", a, b
+a = b
+b = valor_de_a
+ESCREVA "Valores após a troca:", a, b
+FIM_ALGORITMO
+```
+#### Fluxograma
+```mermaid
+flowchart TD
+A([INÍCIO]) --> B{{Digite duas variáveis}}
+B --> C[\numero\]
+C --> D[\a = valor_de_a\]
+D --> F{{Valores das variáveis:, a, b}}
+F --> G[\a = b\]
+G --> H[\b = valor_de_a\]
+H --> I{{Valores após a troca:, a, b}}
+I --> Z([FIM])
+```
+#### Teste de mesa
+| a | b | valor_de_a | a | b |
+| -- | -- | -- | -- | -- |
+| 7 | 2 | 7 | 2 | 7 |
+| 8 | 1 | 8 | 1 | 8 |
+| 6 | 4 | 6 | 4 | 6 |
+
 ### Questão 02 - Contagem
 
 #### Pseudocódigo
