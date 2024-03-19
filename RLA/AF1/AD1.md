@@ -13,6 +13,54 @@
 
 # Avaliação Diagnóstica 1
 
+### Questão 02 - Contagem
+
+#### Pseudocódigo
+```
+ALGORITMO
+DECLARE nota: REAL, cont, n: INTEIRO
+INÍCIO
+cont == 0
+ESCREVA "Digite um conjunto de notas"
+LEIA n
+PARA i de 1 ATÉ n FAÇA
+  SE nota >= 50
+    cont == cont + 1
+  SENÃO
+    cont == cont
+FIM_PARA
+ESCREVA "A quantidade de aprovados é:", cont
+FIM_ALGORITMO
+```
+#### Fluxograma
+```mermaid
+flowchart TD
+A([INÍCIO]) --> B{{Digite um conjunto de notas}}
+B --> C[\n, notas, cont\]
+C --> D[\cont = 0\]
+D --> E[[i=1 ATÉ n]]
+E --> H{{A quantidade de aprovados é:, cont}}
+E --> F{nota >= 50}
+F --FALSE--> G2[cont = cont]
+G2 --LOOP--> E
+F --TRUE--> G[cont = cont + 1]
+G --LOOP--> E
+H --> Z([FIM])
+```
+#### Teste de mesa
+| it | n | nota | nota >= 50 | cont |
+| -- | -- | -- | -- | -- |
+| 1 | 10 | 90 | V | 1 |
+| 2 | 10 | 78 | V | 2 |
+| 3 | 10 | 85 | V | 3 |
+| 4 | 10 | 45 | F | 3 |
+| 5 | 10 | 92 | V | 4 |
+| 6 | 10 | 82 | V | 5 |
+| 7 | 10 | 40 | F | 5 |
+| 8 | 10 | 88 | V | 6 |
+| 9 | 10 | 35 | F | 6 |
+| 10 | 10 | 65 | V | 7 |
+
 ### Questão 03 - Soma de um conjunto de números
 
 #### Pseudocódigo
