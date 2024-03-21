@@ -152,6 +152,51 @@ J --> Z([FIM])
 ### Questão 04 - Cálculo de uma série
 
 #### Pseudocódigo
+```
+ALGORITMO
+DECLARE n, S, numerador, denominador, termo: inteiro
+INÍCIO
+ESCREVA "Digite o número de termos da série S"
+LEIA n
+SE n < 0
+  ESCREVA "O número deve ser não-nulo"
+SENAO
+  S = 0
+  PARA i de 0 ATÉ n FAÇA
+    numerador = 2 * i + 1
+    denominador = 2 * i + 2
+    termo = numerador / denominador
+    S = S + termo
+  FIM_PARA
+  ESCREVA "A soma da série S é:", S
+FIM_ALGORITMO
+```
+#### Fluxograma
+```mermaid
+flowchart TD
+A([INICIO]) --> B{{Digite o número de termos da série S: }}
+B --> C[/n/]
+C --> C2{n < 0}
+C2 --FALSE--> D[S = 0]
+C2 --TRUE--> C3{{O número deve ser não-nulo}}
+C3 --> K
+D --> E[[i=0 ATE n PASSO 1]]
+E --i > n--> J{{"Soma da série S é ", S}}
+J --> K([FIM])
+E --"i=0,1,2,..,n"--> F[numerador = 2 * i + 1]
+F --> G[denominador = 2 * i + 2]
+G --> H[termo = numerador / denominador]
+H --> I[S += termo]
+I --LOOP--> E
+```
+#### Teste de mesa
+| it | n  | S  | i | numerador | denominador | termo | S += termo | Saída |
+| -- | -- | -- |-- | -- | -- | --  | -- | -- |
+|    | 0  | 0  |  |  |  |  |  |  |
+| 1  | 4  | 0  | 0 | 2*0+1 = 1 | 2*0+2 = 2   | 1/2   | 0+1/2 = 1/2 |  |
+| 2  | 4  | 0  | 1 | 2*1+1 = 1 | 2*1+2 = 2   | 3/4   | 1/2+3/4 = 1.25 |  |
+| 3  | 4  | 0  | 2 | 2*2+1 = 1 | 2*2+2 = 2   | 5/6   | 0+1/2 = 2.08 |  |
+| 4  | 4  | 0  | 3 | 2*3+1 = 1 | 2*3+2 = 2   | 7/8   | 0+1/2 = 2.96 | Soma da série S é 2.96 |
 
 ### Questão 05 - Cálculo fatorial
 
